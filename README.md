@@ -82,10 +82,6 @@ storage before your games. The [install guide](INSTALL.md) has every step.
 
 ## Support and community
 
-- **Discord:** [join the server](https://discord.gg/9xC67qTjDq) for help and news.
-- **Ko-fi:** [support me on Ko-fi](https://ko-fi.com/asebrahim) · **Patreon:** [Patreon](https://www.patreon.com/c/ASEbrahim)
-- **Problems and device reports:** [GitHub Issues](https://github.com/ASEbrahim/MaliBridge/issues)
-- **Release history:** [all releases](https://github.com/ASEbrahim/MaliBridge/releases)
 
 ## Credits and licence
 
