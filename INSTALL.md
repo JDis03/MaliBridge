@@ -10,7 +10,7 @@ the official DroidDeck if you have it. The current version is v0.5.5.3, built on
 
 On a Galaxy Tab S10+ or S11 Ultra it works well. On other Mali devices it's still a test, so expect
 rough edges and please report what you find. Not sure about your device? Check the
-[Does my device work?](README.md#does-my-device-work) table.
+[Does my device work?](docs/DEVICES.md) table.
 
 **Quick version:** install, start a Steam session (the Mali bridge is on by default), and play. The
 app picks a working DroidDeck-Proton by itself, so there is nothing to switch.
@@ -89,7 +89,7 @@ Start with something light. These run well:
 | Portal | Excellent, about 63 fps | Excellent, 85-90 fps |
 | Inscryption | Excellent, 68-83 fps | Very playable, 55-57 fps |
 
-The [full list](README.md#games-that-run) has every game I've tested.
+The [full list](docs/GAMES.md) has every game I've tested.
 
 ## How demanding each game is
 
@@ -111,7 +111,7 @@ It gets smoother the more you play.
 The bridge has two modes, switched with **Safe mode** under the Mali bridge button in **Setup**:
 
 - **Safe mode: on** (the default) is the most compatible. Start here, especially on a device that
-  isn't marked "works well" in the [device table](README.md#does-my-device-work).
+  isn't marked "works well" in the [device table](docs/DEVICES.md).
 - **Safe mode: off** is performance mode: faster where your GPU passed its checks.
 
 On my two tablets the difference was small: 0-2% in most games I measured (the README has the
@@ -143,7 +143,7 @@ driver, the mode, and the problems seen per game). You can read it before sendin
 what is shared.
 
 On the Mali-G925 the Steam window can feel slow. Games are not affected. This is not fixed yet (see
-the README's [known issues](README.md#known-issues)).
+the README's [known issues](docs/KNOWN-ISSUES.md)).
 
 ## FAQ
 
@@ -155,7 +155,7 @@ Mali devices.
 It needs an Arm Mali GPU (Immortalis is Mali too). Not sure which chip you have? Look under
 Settings → About phone (or About tablet) for the processor, or install an app like CPU-Z, which
 shows the GPU too. Then look up the chip in the
-[Does my device work?](README.md#does-my-device-work) table. On the Galaxy Tab S10+ and S11 Ultra
+[Does my device work?](docs/DEVICES.md) table. On the Galaxy Tab S10+ and S11 Ultra
 it works well. On other Mali devices it is still a test: it depends on the GPU and its driver, so
 try it and send logs (see "If something goes wrong"). Snapdragon chips have Adreno GPUs, which the
 official DroidDeck supports.
@@ -213,5 +213,5 @@ and licensed under GPL-3.0-or-later; any reuse of the code must follow that lice
 ## Tested devices
 
 The list of tested devices and player reports is in the README:
-[Does my device work?](README.md#does-my-device-work). Reports from any Mali GPU I haven't tested
+[Does my device work?](docs/DEVICES.md). Reports from any Mali GPU I haven't tested
 are very welcome.
