@@ -61,8 +61,10 @@ se calienta menos y queda más RAM libre.
   dependan del bloque del hilo. La idea y el script vienen de
   [arusiasotto/wow-forever-droiddeck](https://github.com/arusiasotto/wow-forever-droiddeck)
   (`deprecated/scripts/patch-ntdll-teb-table-stub.py` en ese repo).
-- **Aún no está confirmado que la APK publicada ya incluya este parche.** Hasta que una versión lo
-  indique aquí, una instalación sin tocar no se considera compatible con WoW.
+- **La APK oficial v0.5.5.3 no incluye este parche ni el DXVK de arriba.** Lo comprobé: la APK
+  instalada en el teléfono de pruebas es idéntica byte a byte a esa versión (mismo SHA-256), y el
+  `ntdll.dll` parcheado y las DLL de DXVK se añadieron a mano después. Por eso una instalación sin
+  tocar aún no es compatible con WoW.
 - Memoria: 8 GB es el mínimo de la app; para WoW, un dispositivo de 12 GB es el caso cómodo.
 - Solo se probó Retail. No se probaron otros juegos de Blizzard.
 

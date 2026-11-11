@@ -58,8 +58,10 @@ phone cooler and leaves more RAM free.
   there. The patch rewrites those stubs so they only depend on the thread block. The idea and the
   script come from [arusiasotto/wow-forever-droiddeck](https://github.com/arusiasotto/wow-forever-droiddeck)
   (see `deprecated/scripts/patch-ntdll-teb-table-stub.py` there).
-- **Whether the released APK already contains this patch is not confirmed yet.** Until a release says
-  so here, treat a stock install as unsupported for WoW.
+- **The official v0.5.5.3 APK does not include this patch, nor the DXVK build above.** I checked: the APK
+  installed on the test phone is byte-identical to that release (same SHA-256), and the patched
+  `ntdll.dll` and the DXVK DLLs were added by hand afterwards. A stock install is therefore not
+  supported for WoW yet.
 - Memory: 8 GB is the floor for the app; for WoW, 12 GB devices are the comfortable case.
 - Only Retail was tested. Other Blizzard games were not.
 
