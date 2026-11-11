@@ -79,16 +79,6 @@ storage before your games. The [install guide](INSTALL.md) has every step.
 
 ## Getting help
 
-The quickest help is on [Discord](https://discord.gg/9xC67qTjDq).
-
-1. Let the game close, then tap **Stop** in the side menu.
-2. Tap **Send logs to MaliBridge** (in **Setup > Diagnostics**, on the end screen, or in the side menu).
-3. You get a short code like `ML-7F3K`. Post it in **#help** on Discord or in a [GitHub issue](https://github.com/ASEbrahim/MaliBridge/issues), with your device model and what happened.
-
-**Reports that help most:** any Mali device not in the tables, black screens, and games that close at start. Launch the game once per session so the logs show a single attempt. If a game closes right after starting with no picture, start it once more and then send logs: its next start saves extra logs.
-
-The logs have account names, passwords and tokens removed, and are kept for 90 days. More detail in the
-[install guide](INSTALL.md#if-something-goes-wrong).
 
 ## Support and community
 
