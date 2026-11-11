@@ -105,6 +105,7 @@ ship different driver versions, so a report is still useful.
 | Immortalis-G720 | Samsung Galaxy Tab S10+ (Dimensity 9300+) | r44p1 | **Works** | Tested in depth |
 | Immortalis-G720 | vivo X100 Pro (Dimensity 9300) |  | **Works, with notes** | [Player report](https://github.com/ASEbrahim/MaliBridge/discussions/2#discussioncomment-19193192): Cuphead about 100 fps; Steam's menus about 15 fps with a white flash; Forza Horizon 4 closes when going into the game |
 | Immortalis-G720 | realme Neo7 (Dimensity 9300+) | r44p1 | **Works** | [Player report](https://github.com/ASEbrahim/MaliBridge/issues/5): Stardew Valley about 59 fps, Balatro 55-72 fps |
+| Mali-G720 | Xiaomi 15T (Dimensity 8400) |  | **Works, with notes** | World of Warcraft Retail (native ARM64 client, Battle.net) 54-57 fps; tested on this one device, see [the WoW guide](docs/WOW.md) |
 | Immortalis-G720 | Xiaomi 14T Pro (Dimensity 9300+) | r44p1 | **Works, with notes** | [Player report](https://github.com/ASEbrahim/MaliBridge/discussions/2#discussioncomment-19146763): Steam, controller and downloads work; Alan Wake 20-50 fps on Low; some graphics glitches that need a game restart |
 | Mali-G720 | POCO X8 Pro (Dimensity 8500) | r49p1 | **Works, with notes** | [Player reports](https://github.com/ASEbrahim/MaliBridge/issues/9#issuecomment-6328655497): Indiana Jones and the Emperor's Tomb about 30 fps; Hob has freezes |
 | Mali-G720 | POCO X7 Pro (Dimensity 8400-Ultra) |  | **Works** | [Player report](https://github.com/ASEbrahim/MaliBridge/issues/23): Lighter games run (Stardew Valley, Rain World, Tukoni: Forest Keepers and more); [Darksiders Genesis 23-27 fps on Low](https://github.com/ASEbrahim/MaliBridge/issues/62) |
@@ -436,6 +437,13 @@ and SOMA closes when its first load ends.
 
 More player results, by device and game, are on the [MaliBridge Library](https://malibridge.com/).
 
+
+## World of Warcraft (Battle.net)
+
+World of Warcraft Retail runs through the official Battle.net client with Blizzard's native ARM64
+executable: 54-57 fps on a Xiaomi 15T (Mali-G720 MC7). It has only been tested on that one device.
+Read [the WoW guide](docs/WOW.md) ([Español](docs/WOW.es.md)) for the steps, what to expect on the
+first start, and the current limits.
 
 ## Best settings and performance tips
 
