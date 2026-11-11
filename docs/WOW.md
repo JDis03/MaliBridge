@@ -53,15 +53,14 @@ phone cooler and leaves more RAM free.
 
 ## Requirements and known limits
 
-- The native ARM64 client needs a patched `ntdll.dll` in the Proton you use. Blizzard's executable maps
-  its own clean copy of `ntdll.dll` and calls system services through it; stock Wine stubs crash
-  there. The patch rewrites those stubs so they only depend on the thread block. The idea and the
-  script come from [arusiasotto/wow-forever-droiddeck](https://github.com/arusiasotto/wow-forever-droiddeck)
-  (see `deprecated/scripts/patch-ntdll-teb-table-stub.py` there).
-- **The official v0.5.5.3 APK does not include this patch, nor the DXVK build above.** I checked: the APK
-  installed on the test phone is byte-identical to that release (same SHA-256), and the patched
-  `ntdll.dll` and the DXVK DLLs were added by hand afterwards. A stock install is therefore not
-  supported for WoW yet.
+- **The `ntdll.dll` fix is already in DroidDeck-Proton, nothing to patch.** Blizzard's executable maps
+  its own clean copy of `ntdll.dll` and calls system services through it, and stock Wine stubs crash
+  there. DroidDeck-Proton carries the fix since **11-11.3** (release notes: "World of Warcraft on
+  ARM64EC", by [arusiasotto](https://github.com/arusiasotto)), and the app's default, 11-11.10, has it:
+  I checked that its `ntdll.dll` contains the 258 rewritten stubs. Older Proton builds do not.
+- **Not checked: the game with DroidDeck's own DXVK.** The 54-57 fps above were measured with the
+  ARM64X DXVK build copied into the Battle.net prefix by hand. I have not compared against the DXVK the
+  app picks by itself, so I cannot say yet whether that copy is needed.
 - Memory: 8 GB is the floor for the app; for WoW, 12 GB devices are the comfortable case.
 - Only Retail was tested. Other Blizzard games were not.
 
