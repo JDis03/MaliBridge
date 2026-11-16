@@ -15,12 +15,12 @@ Blizzard's own **native ARM64** game executable (`Wow-ARM64.exe`) instead of the
 | | |
 |---|---|
 | Device | Xiaomi 15T (Dimensity 8400, Mali-G720 MC7), 11.6 GB RAM, Android 16 |
-| App | DroidDeck Mali 0.5.5.3 |
+| App | DroidDeck Mali 0.5.6 (tested on 0.5.5.3 and 0.5.6) |
 | Compatibility tool | DroidDeck-Proton 11-12.1 |
-| Game | World of Warcraft Retail, build 70888, native ARM64 client |
-| DXVK | the ARM64X build from [JDis03/dxvk](https://github.com/JDis03/dxvk/releases/tag/v3.1.0-mali-arm64x), copied into the Battle.net prefix |
-| Result | **54-57 fps** in game, launched from Battle.net |
-| Memory | the game process held about 1.2-1.3 GB resident |
+| Game | World of Warcraft Retail, native ARM64 client (`Wow-ARM64.exe`) |
+| DXVK | the ARM64X build from [JDis03/dxvk](https://github.com/JDis03/dxvk/releases/tag/v3.1.1-mali-arm64x) (`v3.1.1-mali-arm64x`) |
+| Result | **~59 fps** in the 3D login/menu scene; **~27–28 fps** flat in-world (Westfall / Elwynn Forest, native 1280×720, `vsync=0`, MaliBridge `performance` mode) |
+| Memory | the game process held about 1.2–1.3 GB resident |
 
 ## Why the ARM64 client
 
@@ -58,9 +58,8 @@ phone cooler and leaves more RAM free.
   there. DroidDeck-Proton carries the fix since **11-11.3** (release notes: "World of Warcraft on
   ARM64EC", by [arusiasotto](https://github.com/arusiasotto)), and the app's default, 11-11.10, has it:
   I checked that its `ntdll.dll` contains the 258 rewritten stubs. Older Proton builds do not.
-- **Not checked: the game with DroidDeck's own DXVK.** The 54-57 fps above were measured with the
-  ARM64X DXVK build copied into the Battle.net prefix by hand. I have not compared against the DXVK the
-  app picks by itself, so I cannot say yet whether that copy is needed.
+- **Comparison vs DroidDeck's bundled DXVK:** Measured on Mali-G720 MC7 (1280×720, `vsync=0`, `performance` mode), `JDis03/dxvk` cuts `vkGetPhysicalDeviceMemoryProperties2` polling from **1,042 calls/10 s** on bundled DXVK down to **27–36 calls/10 s**, and adds `preferTransferClears` (~0.7 ms/frame faster in Westfall). Note that `droiddeck-proton-run` restores the bundled DXVK on session start from `desired.tsv` unless launched directly or packaged into the runtime.
+- **In-world GPU bound:** At native 1280×720 in-world, Mali-G720 MC7 is hardware-saturated (~704 MHz, heavy compute ASSAO / Volume Fog / Clustered Lighting / FFT water shaders + fragment bandwidth). Lowering `RenderScale` (e.g. `0.5`–`0.7`) increases FPS at the cost of 3D sharpness.
 - Memory: 8 GB is the floor for the app; for WoW, 12 GB devices are the comfortable case.
 - Only Retail was tested. Other Blizzard games were not.
 

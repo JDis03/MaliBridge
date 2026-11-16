@@ -24,7 +24,7 @@ MaliBridge permite que los juegos de PC en **DroidDeck** usen el driver de la GP
 dispositivo. Funciona dentro de **DroidDeck Mali**, una versión de DroidDeck (la app que ejecuta el
 cliente de Steam y juegos de PC en Android). Es gratis.
 
-**Versión actual: v0.5.5.3**, basada en DroidDeck 0.6.9.
+**Versión actual: v0.5.6** (APK oficial publicado sobre DroidDeck 0.7.1; los archivos fuente de v0.5.6 siguen pendientes de publicación en upstream). Consulta [CONTRIBUTING.md](CONTRIBUTING.md) para contribuir y preparar PRs hacia upstream.
 
 ## ¿Lo necesito?
 
@@ -54,6 +54,7 @@ antes de los juegos. La [guía de instalación](INSTALL.md) (en inglés) tiene t
 | [Juegos](docs/GAMES.md) | resultados de 98 juegos, con fps (inglés) |
 | [World of Warcraft](docs/WOW.es.md) | Retail con Battle.net, cliente ARM64 nativo (probado en un solo dispositivo) |
 | [DXVK para Mali](https://github.com/JDis03/dxvk) | la capa de traducción Direct3D hecha para esto ([Español](https://github.com/JDis03/dxvk/blob/master/README.es.md)) |
+| [Contribuir y upstream](CONTRIBUTING.md) | guía para enviar PRs a este fork y a `ASEbrahim/MaliBridge` |
 
 ## Ayuda
 
